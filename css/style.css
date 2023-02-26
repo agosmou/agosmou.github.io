@@ -38,6 +38,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
 
 
@@ -45,6 +46,7 @@ body {
     font-family: 'Montserrat', sans-serif, italics;
     color: #333;
     line-height: 1.6;
+    background: var(--dark);
 }
 
 
@@ -230,6 +232,7 @@ pre {
 @media(max-width: 500px) {
     .navbar {
         height: 110px;
+
     }
 
     .navbar .flex {
@@ -240,5 +243,17 @@ pre {
         padding: 10px;
         /* gives top nav a slight background to draw the eye */
         background-color: rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+        ;
+    }
+
+    .showcase h1 {
+        font-size: 40px;
+
+    }
+
+    .footer h1 {
+        font-size: 16px;
+        ;
     }
 }
