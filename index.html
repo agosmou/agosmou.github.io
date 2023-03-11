@@ -2,95 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="shortcut icon" href="assets/favicon1.ico" type="image/x-icon">
-    <link rel="icon" href="assets/favicon1.ico" type="image/x-icon">
-    <script src="javascript.js"></script>
+  <!-- footer-social -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <title>Home | Ale Gomez</title>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/ale-favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/ale-favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/ale-favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-    <!-- <base href="https://alegomez.com/"> -->
+  <title>Alejandro Gomez</title>
+
+  <!-- <title>Background Image</title> -->
+  <style>
+    body {
+      background-image: url('images/layered-peaks-haikei.svg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+
+    .other-elements {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 
 </head>
 
+
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <!-- The word "flex" below is a utility class -->
-        <div class="container flex">
+  <div class="other-elements">
 
-            <h1 class="logo"><a href="index.html">
-                    <img src="assets/frank1.png" alt="Ale Gomez Logo">
-                    <em><Strong>Life x Ale</Strong></em></a>
-            </h1>
-
-            <nav>
-                <ul>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="community.html">Community</a></li>
-                    <li><a href="photos.html">Photos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-
-
-                </ul>
-            </nav>
+    <!-- NavBar -->
+    <header>
+      <div class="logo">Alejandro Gomez</div>
+      <div class="toggle"></div>
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- social bar -->
+        <div class="social-bar">
+          <ul>
+            <li>
+              <a href="https://www.github.com/agosmou">
+                <img src="images/github.png" target="_blank" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/alegomez14">
+                <img src="images/linkedin.png" target="_blank" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/alejandro.fla">
+                <img src="images/instagram.png" target="_blank" alt="" />
+              </a>
+            </li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </header>
 
-    <!-- Hero -->
-    <section class="showcase">
-        <!--.container.grid  container with utility class of "grid" -->
-        <!-- each direct element of the container, such as showcase-text and showcase form, are grid items  -->
-        <div class="container grid">
-            <!-- .showcase-text -->
-            <div class="showcase-text">
-                <h1><em><Strong>Alejandro Gomez</Strong></em></h1>
-                <p>
-                    Out for coffee - I'll be back soon.
-                </p>
-                <!-- a.btn.btn-outline -->
-                <a href="projects.html" class="btn btn-outline">Projects</a>
-            </div>
-        </div>
+    <!-- HOME -->
+    <section class="home">
+
+      <div class="home-content">
+        <h1>
+          Hi, I'm Ale.
+        </h1>
+        <p>
+          I like to create, fix, and collaborate.
+        </p>
+        <p>Take a look around and reach out!</p>
+        <a href="contact.html" class="btn">Projects</a>
+        <a href="contact.html" class="btn contactHome">Contact</a>
+      </div>
+
+      <div class="svg-container">
+        <img src="images/hello-ale.svg" class="home-img" alt="" />
+      </div>
+
+
+      <div class="home-social">
+        <ul>
+          <li>
+            <a href="https://www.github.com/agosmou"><i class="fab fa-github fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/alegomez14"><i class="fab fa-linkedin fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/alejandro.fla"><i class="fab fa-instagram fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+
+
     </section>
 
 
-    <!-- Footer -->
-    <footer class="footer bg-dark py-5">
-        <div class="container grid grid-3">
-            <div>
-                <h1><a href="https://www.alegomez.com">alegomez.com</a>
-                </h1>
-                <p>Copyright &copy; 2023</p>
-            </div>
-            <nav>
-                <ul>
-                    <!-- typically this would fature your privacy policy -->
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="community.html">Community</a></li>
-                    <li><a href="photos.html">Photos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="social">
-                <a href="https://www.github.com/agosmou"><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/alegomez14"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://www.instagram.com/alejandro.fla/?hl=en"><i class="fab fa-instagram fa-2x"></i></a>
-            </div>
-        </div>
-    </footer>
+    <script src="js/script.js"></script>
 
+  </div>
 </body>
 
 </html>
