@@ -37,7 +37,7 @@ section {
   height: 100vh;
   align-items: center;
   padding: 100px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 section.home {
@@ -51,6 +51,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #fff0d9;
 }
 
 .other-elements {
@@ -67,6 +68,7 @@ body {
   text-decoration: none;
   padding: 10px 30px;
   margin: 20px 0;
+  margin-right: 10px;
   border: 2px solid var(--primary-color);
 }
 
@@ -188,6 +190,7 @@ body {
   position: relative;
   z-index: 10;
   max-width: 600px;
+  min-width: 250px;
 
 }
 
@@ -249,6 +252,7 @@ body {
 }
 
 .fa-github:hover {
+  transform: scale(0.98);
   color: var(--fifth-color);
 }
 
@@ -257,6 +261,7 @@ body {
 }
 
 .fa-linkedin:hover {
+  transform: scale(0.98);
   color: var(--fifth-color);
 }
 
@@ -265,6 +270,41 @@ body {
 }
 
 .fa-instagram:hover {
+  transform: scale(0.98);
+  color: var(--fifth-color);
+}
+
+/*-------------------------- Contact & Project Socials --------------------------*/
+.contact-social li {
+  list-style: none;
+  margin-bottom: 35px;
+  display: inline-block;
+}
+
+.la-github {
+  color: var(--fourth-color);
+}
+
+.la-github:hover {
+  transform: scale(0.98);
+  color: var(--fifth-color);
+}
+
+.la-linkedin {
+  color: var(--fourth-color);
+}
+
+.la-linkedin:hover {
+  transform: scale(0.98);
+  color: var(--fifth-color);
+}
+
+.la-instagram {
+  color: var(--fourth-color);
+}
+
+.la-instagram:hover {
+  transform: scale(0.98);
   color: var(--fifth-color);
 }
 
@@ -281,7 +321,7 @@ body {
 
 .contact-form {
   position: relative;
-  background: #f9f9f9;
+  background: #f7e9d5;
   width: calc(100% - 400px);
   padding: 60px 40px 20px;
 }
@@ -325,7 +365,7 @@ body {
 }
 
 .contact-form .row input[type='submit'] {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: #fff0d9;
   margin: 0;
   text-transform: uppercase;
@@ -337,7 +377,7 @@ body {
 
 .contact-info {
   width: 350px;
-  background: #f9f9f9;
+  background: #fff0d9;
   padding: 60px 40px 20px;
 }
 
@@ -358,13 +398,11 @@ body {
 
 .contact-info .info-box .details p,
 .contact-info .info-box .details a {
-  color: #111;
+  color: var(--secondary-color);
 }
 
-@media (max-width: 1068px) {
-  /* .home-img {
-    display: none;
-  } */
+/* tablets */
+@media (max-width: 1107px) {
 
   .svg-container {
     transform: scale(0.65);
@@ -376,9 +414,15 @@ body {
     font-size: 1.5rem;
   }
 
-  section {
-    padding: 100px 40px;
+  /* test */
+  .home-content {
+    min-width: 250px;
+
   }
+
+  /* section {
+    padding: 100px 40px;
+  } */
 
   .navigation ul li a {
     font-size: 2rem;
@@ -410,4 +454,90 @@ body {
   }
 }
 
-@media (max-width: 768px) {}
+/* mobile phones */
+@media (max-width: 1101px) {
+
+
+  .svg-container {
+    transform: scale(0.50);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+    margin-top: 40px;
+  }
+
+  section.home {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  h1 {
+    padding-top: 90px;
+    font-size: 15x;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 20px 0 10px;
+    font-size: 0.8em;
+  }
+
+  /* BUTTON */
+  .btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff0d9;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 10px 0;
+    margin-right: 10px;
+    border: 1px solid var(--primary-color);
+    font-size: .8rem;
+  }
+
+  .contactHome {
+    display: inline-block;
+    background: #fff0d9;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 10px 0;
+    border: 1px solid var(--primary-color);
+    font-weight: bold;
+    font-size: .8rem;
+  }
+
+  /* social media icons */
+  .home-social li {
+    display: inline-block;
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 0px;
+  }
+
+  .fa-github {
+    color: var(--third-color);
+  }
+
+  .fa-linkedin {
+    color: var(--third-color);
+  }
+
+  .fa-instagram {
+    color: var(--third-color);
+  }
+
+  .fa-github:hover,
+  .fa-linkedin:hover,
+  .fa-instagram:hover {
+    transform: scale(0.98);
+    color: var(--third-color);
+  }
+
+
+}
