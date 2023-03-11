@@ -1,259 +1,390 @@
-/* nav and footer */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-
-
-
-/* Defining CSS propertices */
-
-/* :root means this can be used anywhere */
 :root {
-    /* dashdash " -- " is the syntax for custom properties */
-    --primary-color: #054950;
-    --secondary-color: #d44932;
-    --color3: #a0292b;
-    --light-color: #d4872d;
-    /* --success-color: #5cb85c;
-    --error-color: #d9534f; */
-
-    /* color palette */
-    --red: #ed0023;
-    --red-orange: #a53d2f;
-    --beige: #a39062;
-    --teal: #086788;
-    --light-blue: #06aed5;
-    --yellow: #f9b32f;
-    --dark: #202124;
-
+  --primary-color: #f60f20;
+  --secondary-color: #1b206e;
 }
 
-
-
-/* --------------------------global----------------------------- */
-
+/* BASE STYLES */
 * {
-    /* THIS RESET IS SUGGESTED ON ALL PROJECTS TO REMOVE DEFAULT BROWSER MARGIN AND PADDING */
-    /* creating a reset using the universal selector, asterisk */
-    /* allows us to add padding and borders without having to add to the width of an element*/
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
+html,
 body {
-    font-family: 'Montserrat', sans-serif, italics;
-    color: #333;
-    line-height: 1.6;
-    background: var(--dark);
+  font-family: 'Poppins', sans-serif;
+  color: #111;
 }
 
-
-.logo img {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
-    overflow: auto;
-}
-
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    /* this removes the default blue hyperlink styling from the broswer and adds our own styling */
-    text-decoration: none;
-    color: #333;
-}
-
-h1,
-h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0;
+h1 {
+  font-size: 30px;
+  font-weight: 500;
 }
 
 p {
-    margin: 10px 0;
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
 }
 
-img {
-    /* set img width to 100% so that even if the image is large, it will not bust out of its container */
-    width: 100%
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+  margin-top: 60px;
 }
 
-code,
-pre {
-    background: #333;
-    color: #fff;
-    padding: 10px;
+section.home {
+  flex-direction: row;
+  margin-top: 0;
 }
 
-/* --------------------------navbar----------------------------- */
-
-.navbar {
-    /* styling for div class navbar */
-    background-color: var(--dark);
-    color: #fff;
-    height: 70px;
+/* BUTTON */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  border: 0;
 }
 
-.navbar ul {
-    display: flex;
+.btn:hover {
+  transform: scale(0.98);
 }
 
-.navbar a {
-    color: #fff;
-    padding: 10px;
-    margin: 0 5px;
-
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 20;
 }
 
-.navbar ul a:hover {
-    border-bottom: 2px #fff solid;
+/* TOGGLE */
+.toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color) url(../images/menu.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+  cursor: pointer;
 }
 
-.navbar .flex {
-    /* if flex is in the navbar, then we have space between  */
-    justify-content: space-between;
+.toggle.active {
+  background: var(--primary-color) url(../images/close.png);
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* --------------------------showcase/hero----------------------------- */
-
-.showcase {
-    height: 740px;
-    background-color: var(--dark);
-    /* making a color of this white for some contrast */
-    color: #fff;
-    /* adding position relative so that if we need to position anything absolute within this, we are able to do so */
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/assets/mesh-97.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+/* NAVIGATION */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.showcase h1 {
-    font-size: 80px;
-
+.navigation.active {
+  left: 0;
 }
 
-.showcase p {
-    /* adding margin to the paragraph */
-    margin: 20px 0px;
+.navigation ul {
+  position: relative;
 }
 
-.showcase .grid {
-    overflow: visible;
-    grid-template-columns: 55% 45%;
-    gap: 30px;
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
 }
 
-
-/*-------------------------- Footer --------------------------*/
-.footer .social a {
-    margin: 0 10px;
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
 }
 
-.fa-github:hover {
-    color: #000000;
+.navigation ul li a:hover {
+  color: var(--primary-color);
 }
 
-.fa-linkedin:hover {
-    color: #000000;
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fa-instagram:hover {
-    color: #000000;
+.navigation .social-bar a {
+  display: inline-block;
+  transform: scale(0.5);
 }
 
-
-
-/*-------------------------- Tablets and Under--------------------------*/
-
-@media(max-width: 768px) {
-
-    .grid,
-    .showcase .grid,
-    .stats .grid,
-    .cli .grid,
-    .cloud .grid,
-    .features-main .grid,
-    .docs-main .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .showcase {
-        height: auto;
-    }
-
-    .showcase-text {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .showcase-form {
-        /* justify content is on grid container or flexbox container 
-    and justifies all elements inside */
-        /* justify self you put on a grid or flex item to justify just that item*/
-        justify-self: center;
-        margin: auto;
-    }
-
-    .cli .grid>*:first-child {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .features-head,
-    .features-sub-head,
-    .docs-head {
-        text-align: center;
-    }
-
-    .features-head img,
-    .features-sub-head img,
-    .docs-head img {
-        justify-self: center;
-    }
-
-    .features-main .grid>*:first-child,
-    .features-main .grid>*:nth-child(2) {
-        grid-column: 1;
-    }
-
+.navigation .email-icon {
+  position: absolute;
+  bottom: 20px;
+  transform: scale(0.5);
 }
 
-/*-------------------------- Mobile --------------------------*/
-@media(max-width: 500px) {
-    .navbar {
-        height: 110px;
+/* HOMEPAGE */
+.home-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
 
-    }
+.home-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 110%;
+}
 
-    .navbar .flex {
-        flex-direction: column;
-    }
+/* SERVICES PAGE */
+.services {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
 
-    .navbar ul {
-        padding: 10px;
-        /* gives top nav a slight background to draw the eye */
-        background-color: rgba(0, 0, 0, 0.1);
-        font-size: 12px;
-        ;
-    }
+.services .service {
+  padding: 30px;
+}
 
-    .showcase h1 {
-        font-size: 40px;
+.services .service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-    }
+.services .service h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--secondary-color);
+}
 
-    .footer h1 {
-        font-size: 16px;
-        ;
-    }
+.services .service .icon img {
+  max-width: 100px;
+}
+
+/* WORK PAGE */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.portfolio .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+
+.portfolio .item img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .item .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.portfolio .item:hover .action {
+  opacity: 1;
+}
+
+.portfolio .item .action a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+}
+
+/* CONTACT */
+.contact {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-form {
+  position: relative;
+  background: #f9f9f9;
+  width: calc(100% - 400px);
+  padding: 60px 40px 20px;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+.contact-form .row {
+  width: 100%;
+  display: flex;
+}
+
+.contact-form .input50 {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.contact-form .input100 {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #111;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;
+}
+
+.contact-form .row textarea {
+  height: 150px;
+}
+
+.contact-form .row input[type='submit'] {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-info {
+  width: 350px;
+  background: #f9f9f9;
+  padding: 60px 40px 20px;
+}
+
+.contact-info .info-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.contact-info .info-box .contact-icon {
+  width: 20px;
+  margin-right: 40px;
+}
+
+.contact-info .info-box .details h4 {
+  color: var(--secondary-color);
+}
+
+.contact-info .info-box .details p,
+.contact-info .info-box .details a {
+  color: #111;
+}
+
+@media (max-width: 1068px) {
+  .home-img {
+    display: none;
+  }
+
+  .logo {
+    top: 10px;
+    left: 40px;
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 100px 40px;
+  }
+
+  .navigation ul li a {
+    font-size: 2rem;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 30px 30px 20px;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .services .service {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
 }
