@@ -207,6 +207,7 @@ body {
   width: 300px;
   height: 300px;
   margin: 5px;
+
 }
 
 .portfolio .item img {
@@ -324,6 +325,8 @@ body {
   background: #f7e9d5;
   width: calc(100% - 400px);
   padding: 60px 40px 20px;
+  /* added aut margin to center the contact form */
+  margin: auto;
 }
 
 .contact-form form {
@@ -487,6 +490,20 @@ body {
     margin-top: 20px;
     padding: 30px 30px 20px;
   }
+
+  .portfolio .item .action {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .portfolio .item .action a {
+    border: 1px solid #fff0d9;
+    padding: 5px 15px;
+    opacity: 1;
+    transition: none;
+  }
+
+
 }
 
 /* mobile phones */
@@ -502,7 +519,7 @@ body {
     flex-direction: column;
     height: 100vh;
     align-items: center;
-    padding: 100px;
+    padding: 50px;
     margin-top: 40px;
   }
 
