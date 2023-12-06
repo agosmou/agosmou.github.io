@@ -1,13 +1,14 @@
-<!--
-// v0 by Vercel.
-// https://v0.dev/t/BECnek7UkHY
--->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="ale-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ale-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ale-favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>AG</title>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -21,88 +22,53 @@
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 
-<body>
-    <div class="relative bg-black text-white">
-        <img src="https://imgur.com/xBmEfw2" alt="alegomez.com hero image" class="w-full h-[600px] object-cover" />
+<body class="bg-black text-white">
+    <!-- Hero Image -->
+    <div class="relative overflow-hidden">
+        <!-- https://i.imgur.com/xBmEfw2.jpg -->
+        <img src="./yb.png" alt="alegomez.com hero image" class="w-full h-screen object-cover" />
         <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between p-8 md:p-16">
-            <div class="flex flex-col items-start justify-center">
-                <h2 class="text-8xl font-bold mb-4">Alejandro Gomez</h2>
-            </div>
-        </div>
-        <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-8 md:p-16">
-          <div class="bg-gray-800 p-4 rounded-lg">
-            <img
-              src="/placeholder.svg"
-              height="200"
-              width="200"
-              alt="Project 1"
-              style="aspect-ratio: 200 / 200; object-fit: cover;"
-            />
-            <p class="text-white mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          <div class="bg-gray-800 p-4 rounded-lg">
-            <img
-              src="/placeholder.svg"
-              height="200"
-              width="200"
-              alt="Project 2"
-              style="aspect-ratio: 200 / 200; object-fit: cover;"
-            />
-            <p class="text-white mt-4">Vivamus et nisi ut dolor pretium convallis.</p>
-          </div>
-          <div class="bg-gray-800 p-4 rounded-lg">
-            <img
-              src="/placeholder.svg"
-              height="200"
-              width="200"
-              alt="Project 3"
-              style="aspect-ratio: 200 / 200; object-fit: cover;"
-            />
-            <p class="text-white mt-4">Quisque euismod lacus in mi consequat sagittis.</p>
-          </div>
-          <div class="bg-gray-800 p-4 rounded-lg">
-            <img
-              src="/placeholder.svg"
-              height="200"
-              width="200"
-              alt="Project 4"
-              style="aspect-ratio: 200 / 200; object-fit: cover;"
-            />
-            <p class="text-white mt-4">In dignissim metus eu egestas consequat.</p>
-          </div>
-          <div class="bg-gray-800 p-4 rounded-lg">
-            <img
-              src="/placeholder.svg"
-              height="200"
-              width="200"
-              alt="Project 5"
-              style="aspect-ratio: 200 / 200; object-fit: cover;"
-            />
-            <p class="text-white mt-4">Aliquam auctor orci porta augue vestibulum, in mollis metus fringilla</p>
-          </div>
-          <div class="bg-gray-800 p-4 rounded-lg">
-            <img
-              src="/placeholder.svg"
-              height="200"
-              width="200"
-              alt="Project 6"
-              style="aspect-ratio: 200 / 200; object-fit: cover;"
-            />
-            <p class="text-white mt-4">Nullam in nibh malesuada, vehicula sem eget, accumsan quam.</p>
-          </div>
-        </div> -->
-        <div class="p-8 md:p-16">
-            <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
-            <form class="space-y-4">
-                <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Email" aria-label="Email"
-                    type="email" />
-                <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Subject"
-                    aria-label="Subject" type="text" />
-                <textarea class="w-full px-4 py-2 rounded-md bg-gray-800 text-white h-32" placeholder="Message"
-                    aria-label="Message"></textarea>
-            </form>
+            <h2 class="text-5xl md:text-8xl font-bold mb-4">Alejandro Gomez</h2>
         </div>
     </div>
+
+    <!-- About Section -->
+    <div class="flex flex-col md:flex-row items-center p-8 md:p-16">
+        <img src="https://avatars.githubusercontent.com/u/73868258?v=4" alt="About Alejandro"
+            class="w-full md:w-1/2 h-auto object-cover md:mr-8">
+        <div class="mt-4 md:mt-0 md:w-1/2">
+            <h3 class="text-3xl font-bold mb-4">About Me</h3>
+            <p>Here's a little about me... </p>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="p-8 md:p-16 max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
+        <form class="space-y-4" action="https://formspree.io/f/xnqyzpgp" method="POST">
+            <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Email" aria-label="Email"
+                type="email" name="_replyto" required />
+            <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Subject" aria-label="Subject"
+                type="text" name="_subject" required />
+            <textarea class="w-full px-4 py-2 rounded-md bg-gray-800 text-white h-32" placeholder="Message"
+                aria-label="Message" name="message" required></textarea>
+            <!-- Submit Button -->
+            <div class="flex justify-center">
+                <button type="submit" class="px-4 py-2 bg-navy-600 text-white rounded-md">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer with Social Icons -->
+    <footer class="p-4">
+        <div class="flex justify-center space-x-4">
+            <!-- Replace href values with your actual social media URLs -->
+            <a href="https://instagram.com/alejandro.fla" class="hover:text-gray-400">Instagram</a>
+            <a href="https://github.com/agosmou" class="hover:text-gray-400">GitHub</a>
+            <a href="https://linkedin.com/alegomez14" class="hover:text-gray-400">LinkedIn</a>
+            <!-- Add more social links as needed -->
+        </div>
+    </footer>
 </body>
 
 </html>
