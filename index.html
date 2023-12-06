@@ -1,137 +1,108 @@
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/BECnek7UkHY
+-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- footer-social -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/ale-favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/ale-favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/ale-favicon/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <title>Alejandro Gomez</title>
-
-  <!-- <title>Background Image</title> -->
-  <style>
-    body {
-      background-image: url('images/layered-peaks-haikei.svg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-    }
-
-    .other-elements {
-      position: relative;
-      z-index: 1;
-    }
-  </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG</title>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JSL374Y0SJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-JSL374Y0SJ');
-</script>
-
-<body>
-
-  <div class="other-elements">
-
-    <!-- NavBar -->
-    <header>
-      <div class="logo">Alejandro Gomez</div>
-      <div class="toggle"></div>
-      <div class="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <!-- social bar -->
-        <div class="social-bar">
-          <ul>
-            <li>
-              <a href="https://www.github.com/agosmou">
-                <img src="images/github.png" target="_blank" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/alegomez14">
-                <img src="images/linkedin.png" target="_blank" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/alejandro.fla">
-                <img src="images/instagram.png" target="_blank" alt="" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <!-- HOME -->
-    <section class="home">
-
-      <div class="home-content">
-        <h1>
-          Hi, I'm Ale.
-        </h1>
-        <p>
-          I like to create, fix, and collaborate.
-        </p>
-        <p>Take a look around and reach out!</p>
-        <a href="projects.html" class="btn">Projects</a>
-        <a href="contact.html" class="btn contactHome">Contact</a>
-      </div>
-
-      <div class="svg-container">
-        <img src="images/hello-ale.svg" class="home-img" alt="" />
-      </div>
-
-
-      <div class="home-social">
-        <ul>
-          <li>
-            <a href="https://www.github.com/agosmou"><i class="fab fa-github fa-2x"></i></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/alegomez14"><i class="fab fa-linkedin fa-2x"></i></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/alejandro.fla"><i class="fab fa-instagram fa-2x"></i></a>
-          </li>
-        </ul>
-      </div>
-
-
-    </section>
-
-
-    <script src="js/script.js"></script>
-
-  </div>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JSL374Y0SJ"></script>
-  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-JSL374Y0SJ');
-  </script>
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<body>
+    <div class="relative bg-black text-white">
+        <img src="https://imgur.com/xBmEfw2" alt="alegomez.com hero image" class="w-full h-[600px] object-cover" />
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between p-8 md:p-16">
+            <div class="flex flex-col items-start justify-center">
+                <h2 class="text-8xl font-bold mb-4">Alejandro Gomez</h2>
+            </div>
+        </div>
+        <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-8 md:p-16">
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <img
+              src="/placeholder.svg"
+              height="200"
+              width="200"
+              alt="Project 1"
+              style="aspect-ratio: 200 / 200; object-fit: cover;"
+            />
+            <p class="text-white mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <img
+              src="/placeholder.svg"
+              height="200"
+              width="200"
+              alt="Project 2"
+              style="aspect-ratio: 200 / 200; object-fit: cover;"
+            />
+            <p class="text-white mt-4">Vivamus et nisi ut dolor pretium convallis.</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <img
+              src="/placeholder.svg"
+              height="200"
+              width="200"
+              alt="Project 3"
+              style="aspect-ratio: 200 / 200; object-fit: cover;"
+            />
+            <p class="text-white mt-4">Quisque euismod lacus in mi consequat sagittis.</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <img
+              src="/placeholder.svg"
+              height="200"
+              width="200"
+              alt="Project 4"
+              style="aspect-ratio: 200 / 200; object-fit: cover;"
+            />
+            <p class="text-white mt-4">In dignissim metus eu egestas consequat.</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <img
+              src="/placeholder.svg"
+              height="200"
+              width="200"
+              alt="Project 5"
+              style="aspect-ratio: 200 / 200; object-fit: cover;"
+            />
+            <p class="text-white mt-4">Aliquam auctor orci porta augue vestibulum, in mollis metus fringilla</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <img
+              src="/placeholder.svg"
+              height="200"
+              width="200"
+              alt="Project 6"
+              style="aspect-ratio: 200 / 200; object-fit: cover;"
+            />
+            <p class="text-white mt-4">Nullam in nibh malesuada, vehicula sem eget, accumsan quam.</p>
+          </div>
+        </div> -->
+        <div class="p-8 md:p-16">
+            <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
+            <form class="space-y-4">
+                <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Email" aria-label="Email"
+                    type="email" />
+                <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Subject"
+                    aria-label="Subject" type="text" />
+                <textarea class="w-full px-4 py-2 rounded-md bg-gray-800 text-white h-32" placeholder="Message"
+                    aria-label="Message"></textarea>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
