@@ -1,85 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="ale-favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="ale-favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="ale-favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Alejandro Gomez</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="ale-favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ale-favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ale-favicon/favicon-16x16.png">
+  <link rel="manifest" href="ale-favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Alejandro Gomez</title>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JSL374Y0SJ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-JSL374Y0SJ');
-</script>
-<script src="https://cdn.tailwindcss.com"></script>
+<body style="margin: 0; background: #f6f3ec; color: #1a1a1a; font-family: 'Inconsolata', monospace; min-height: 100vh;">
 
-<body class="bg-slate-900 text-slate-200">
+  <nav style="padding: 1.25rem 2.5rem; display: flex; gap: 2rem; border-bottom: 1px solid #dedad3;">
+    <a href="/" style="color: #2d5a27; text-decoration: none; font-weight: 700; border-bottom: 2px solid #c5f000; padding-bottom: 2px;">home</a>
+    <a href="/goodies.html" style="color: #888; text-decoration: none;">goodies</a>
+  </nav>
 
-    <!-- Hero Image -->
-    <div class="relative overflow-hidden">
-        <img src="https://i.imgur.com/xBmEfw2.jpg" alt="alegomez.com hero image" class="w-full h-screen object-cover" />
+  <main style="max-width: 640px; margin: 5rem auto; padding: 0 2.5rem;">
 
-        <!-- Overlay -->
-        <div class="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50"></div>
-
-        <!-- Text Container -->
-        <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center p-8 md:p-16">
-            <h2 class="text-6xl md:text-9xl font-bold text-white self-start">Alejandro Gomez</h2>
-        </div>
-
-        <!-- Get in Touch Link -->
-        <a href="#contact"
-            class="text-2xl md:text-3xl absolute right-10 bottom-20 p-8 text-white underline hover:no-underline">
-            Get in touch
-        </a>
+    <div style="display: flex; align-items: center; gap: 1.75rem; margin-bottom: 2.5rem;">
+      <img src="https://avatars.githubusercontent.com/u/73868258?v=4"
+           alt="Alejandro Gomez"
+           style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #c5f000;">
+      <h1 style="margin: 0; font-size: 2rem; font-weight: 700;">Alejandro Gomez</h1>
     </div>
 
-    <!-- About Section -->
-    <div class="flex flex-col md:flex-row justify-center items-center text-center p-8 md:p-16 mx-auto">
-        <img src="https://avatars.githubusercontent.com/u/73868258?v=4" alt="About Alejandro"
-            class="w-3/4 md:w-1/3 lg:w-1/4 h-auto object-cover mb-4 md:mb-0 md:mr-8">
-        <div class="md:w-1/2">
-            <h3 class="text-3xl font-bold mb-4">About Me</h3>
-            <p class="text-lg">In few words, I love to solve problems and help others.</p>
-            <br>
-            <p class="text-lg">Let's connect - share a food, book, or song recommendation!</p>
-        </div>
+    <p style="font-size: 1rem; line-height: 1.8; color: #333; margin: 0 0 1rem 0;">
+      I love solving problems and helping others.
+    </p>
+    <p style="font-size: 1rem; line-height: 1.8; color: #333; margin: 0 0 3rem 0;">
+      Let's connect — share a food, book, or song recommendation.
+    </p>
+
+    <div style="display: flex; gap: 1.75rem;">
+      <a href="https://github.com/agosmou"
+         style="color: #2d5a27; text-decoration: none; font-weight: 600; border-bottom: 2px solid #c5f000; padding-bottom: 2px;">
+        github
+      </a>
+      <a href="https://linkedin.com/in/alegomez14"
+         style="color: #e8651a; text-decoration: none; font-weight: 600; border-bottom: 2px solid #e8651a; padding-bottom: 2px;">
+        linkedin
+      </a>
+      <!-- TODO: update Instagram handle before uncommenting -->
+      <!-- <a href="https://instagram.com/alejandro.fla"
+         style="color: #2d5a27; text-decoration: none; font-weight: 600; border-bottom: 2px solid #c5f000; padding-bottom: 2px;">
+        instagram
+      </a> -->
     </div>
 
+  </main>
 
-    <!-- Contact Form -->
-    <div class="p-8 md:p-16 max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
-        <form id="contact" class="space-y-4" action="https://formspree.io/f/xnqyzpgp" method="POST">
-            <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Email" aria-label="Email"
-                type="email" name="_replyto" required />
-            <input class="w-full px-4 py-2 rounded-md bg-gray-800 text-white" placeholder="Subject" aria-label="Subject"
-                type="text" name="_subject" required />
-            <textarea class="w-full px-4 py-2 rounded-md bg-gray-800 text-white h-32" placeholder="Message"
-                aria-label="Message" name="message" required></textarea>
-            <!-- Submit Button -->
-            <div class="flex justify-center">
-                <button type="submit" class="px-4 py-2 bg-yellow-400 text-slate-900 rounded-md">Send Message</button>
-            </div>
-        </form>
-    </div>
-
-    <!-- Footer with Social Icons -->
-    <footer class="p-4">
-        <div class="flex justify-center space-x-4">
-            <a href="https://github.com/agosmou" class="hover:text-gray-400">GitHub</a>
-            <a href="https://linkedin.com/in/alegomez14" class="hover:text-gray-400">LinkedIn</a>
-            <a href="https://instagram.com/alejandro.fla" class="hover:text-gray-400">Instagram</a>
-        </div>
-    </footer>
 </body>
-
 </html>
